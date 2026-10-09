@@ -2,8 +2,8 @@ package io.desktop.ffm.macos;
 
 import java.lang.foreign.SegmentAllocator;
 
-import org.java.desktop.ffm.JawtNativeDisplayPointer;
-import org.java.desktop.ffm.JawtNativeDisplayPointerFactory;
+import io.desktop.ffm.JawtNativeDisplayPointer;
+import io.desktop.ffm.JawtNativeDisplayPointerFactory;
 
 public class CALayerFactory implements JawtNativeDisplayPointerFactory {
 

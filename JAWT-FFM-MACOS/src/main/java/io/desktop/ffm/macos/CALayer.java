@@ -3,8 +3,7 @@ package io.desktop.ffm.macos;
 import java.lang.foreign.MemorySegment;
 import java.lang.foreign.SegmentAllocator;
 
-import org.java.desktop.ffm.JawtNativeDisplayPointer;
-
+import io.desktop.ffm.JawtNativeDisplayPointer;
 import io.desktop.ffm.macos.panama.ffm_awt_macos_h;
 
 public class CALayer implements JawtNativeDisplayPointer {
