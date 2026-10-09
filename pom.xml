@@ -13,7 +13,6 @@
         <module>JAWT-FFM-MACOS</module>
         <module>JAWT-FFM-UNIX</module>
         <module>JAWT-FFM-WINDOWS</module>
-        <module>TEST</module>
     </modules>
 
     <properties>
