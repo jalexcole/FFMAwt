@@ -1,6 +1,6 @@
-package org.java.desktop.ffm;
+package io.desktop.ffm;
 
-import org.java.desktop.ffm.api.NativeDisplayPointer;
+import io.desktop.ffm.api.NativeDisplayPointer;
 
 public non-sealed interface JawtNativeDisplayPointer extends NativeDisplayPointer {
     

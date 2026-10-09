@@ -1,4 +1,4 @@
-package org.java.desktop.ffm.api;
+package io.desktop.ffm.api;
 
 import java.awt.AWTException;
 import java.awt.Canvas;
@@ -6,7 +6,7 @@ import java.awt.Graphics;
 import java.lang.foreign.SegmentAllocator;
 import java.util.Objects;
 
-import org.java.desktop.ffm.JawtFFM;
+import io.desktop.ffm.JawtFFM;
 
 public abstract class FFMCanvas extends Canvas {
 

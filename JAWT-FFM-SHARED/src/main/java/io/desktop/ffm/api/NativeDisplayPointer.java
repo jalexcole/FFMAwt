@@ -1,9 +1,9 @@
-package org.java.desktop.ffm.api;
+package io.desktop.ffm.api;
 
 import java.lang.foreign.MemorySegment;
 import java.lang.foreign.SegmentAllocator;
 
-import org.java.desktop.ffm.JawtNativeDisplayPointer;
+import io.desktop.ffm.JawtNativeDisplayPointer;
 
 public sealed interface NativeDisplayPointer permits JawtNativeDisplayPointer {
     

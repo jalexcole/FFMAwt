@@ -1,4 +1,4 @@
-package org.java.desktop.ffm.api;
+package io.desktop.ffm.api;
 
 public interface Rectangle {
 

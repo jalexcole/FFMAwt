@@ -3,7 +3,7 @@ package io.desktop.ffm.unix;
 import java.lang.foreign.MemorySegment;
 import java.lang.foreign.SegmentAllocator;
 
-import org.java.desktop.ffm.JawtNativeDisplayPointer;
+import io.desktop.ffm.JawtNativeDisplayPointer;
 
 public class WindowsNativeDisplayPointer implements JawtNativeDisplayPointer {
 

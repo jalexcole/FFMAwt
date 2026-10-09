@@ -1,4 +1,4 @@
-package org.java.desktop.ffm;
+package io.desktop.ffm;
 
 import java.lang.foreign.SegmentAllocator;
 

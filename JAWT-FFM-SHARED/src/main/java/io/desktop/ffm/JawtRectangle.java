@@ -1,4 +1,4 @@
-package org.java.desktop.ffm;
+package io.desktop.ffm;
 
 import java.lang.foreign.Arena;
 import java.lang.foreign.MemoryLayout;
@@ -6,7 +6,7 @@ import java.lang.foreign.MemorySegment;
 import java.lang.foreign.ValueLayout;
 import java.util.Objects;
 
-import org.java.desktop.ffm.api.Rectangle;
+import io.desktop.ffm.api.Rectangle;
 
 /** FFM representation of {@code JAWT_FFM_Rectangle}. */
 public final class JawtRectangle implements Rectangle {
