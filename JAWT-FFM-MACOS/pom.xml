@@ -2,40 +2,25 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.java.desktop</groupId>
-    <artifactId>ffm-awt-parent</artifactId>
+    <artifactId>ffm-awt-macos</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
 
-    <modules>
-        
-        <module>JAWT-FFM-SHARED</module>
-        
-        <module>JAWT-FFM-MACOS</module>
-        <module>JAWT-FFM-UNIX</module>
-        <module>JAWT-FFM-WINDOWS</module>
-        <module>TEST</module>
-    </modules>
+    <parent>
+        <groupId>org.java.desktop</groupId>
+        <artifactId>ffm-awt-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
 
-    <properties>
-        <maven.compiler.source>22</maven.compiler.source>
-        <maven.compiler.target>22</maven.compiler.target>
-        <junit.jupiter.version>5.12.2</junit.jupiter.version>
-        <lwjgl.version>3.3.6</lwjgl.version>
-    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.java.desktop</groupId>
+            <artifactId>jawt-ffm-shared</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
-    <!-- <build>
-        <testSourceDirectory>${project.build.sourceDirectory}/src/test</testSourceDirectory>
+    <build>
         <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.13.0</version>
-                <configuration>
-                    <compilerArgs>
-                        <arg>-h</arg>
-                        <arg>${project.build.directory}/generated-sources/c</arg>
-                    </compilerArgs>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>native-maven-plugin</artifactId>
@@ -44,15 +29,13 @@
                 <configuration>
                     <sources>
                         <source>
-                            <directory>${project.build.sourceDirectory}/src/main/c</directory>
+                            <directory>${project.basedir}/src/main/c</directory>
                             <includes>
-                                <include>**/*.c</include>
                                 <include>**/*.m</include>
                             </includes>
                         </source>
                     </sources>
                     <compilerStartOptions>
-                        <compilerStartOption>-I${project.build.directory}/generated-sources/c</compilerStartOption>
                         <compilerStartOption>-I${java.home}/include</compilerStartOption>
                         <compilerStartOption>-I${java.home}/include/darwin</compilerStartOption>
                         <compilerStartOption>-fPIC</compilerStartOption>
@@ -62,18 +45,18 @@
                         <linkerStartOption>-L${java.home}/lib</linkerStartOption>
                         <linkerStartOption>-ljawt</linkerStartOption>
                         <linkerStartOption>-framework</linkerStartOption>
-                        <linkerStartOption>OpenGL</linkerStartOption>
-                        <linkerStartOption>-framework</linkerStartOption>
                         <linkerStartOption>Cocoa</linkerStartOption>
+                        <linkerStartOption>-framework</linkerStartOption>
+                        <linkerStartOption>QuartzCore</linkerStartOption>
                     </linkerStartOptions>
                     <linkerOutputDirectory>${project.build.directory}/native</linkerOutputDirectory>
-                    <linkerFinalName>libffmawtjni</linkerFinalName>
+                    <linkerFinalName>libffmawtmacos</linkerFinalName>
                     <linkerFinalNameExt>dylib</linkerFinalNameExt>
                     <attach>false</attach>
                 </configuration>
                 <executions>
                     <execution>
-                        <id>build-jni-library</id>
+                        <id>build-native-library</id>
                         <phase>compile</phase>
                         <goals>
                             <goal>initialize</goal>
@@ -83,14 +66,6 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.5.2</version>
-                <configuration>
-                    <useModulePath>false</useModulePath>
-                </configuration>
-            </plugin>
         </plugins>
-    </build> -->
-
+    </build>
 </project>
