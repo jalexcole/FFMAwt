@@ -3,11 +3,11 @@
         {
             "name": "Mac",
             "includePath": [
-                "${workspaceFolder}/JAWT-FFM/src/main/c",
-                "${workspaceFolder}/FFMAWT/target/generated-sources/c",
+                "${workspaceFolder}/JAWT-FFM/*/src/main/c",
+                "${workspaceFolder}/FFMAWT/*/target/generated-sources/c",
                 "${env:JAVA_HOME}/include",
                 "${env:JAVA_HOME}/include/darwin",
-                "${env:JAVA_HOME}/src/java.base/share/native/libjava",
+                
                 "/opt/homebrew/include/"
             ],
             "defines": [

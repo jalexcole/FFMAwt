@@ -6,9 +6,9 @@
  * published by the Free Software Foundation.
  */
 
-#include "jni.h"
-#include "jawt.h"
-#include "jawt_md.h"
+#include <jni.h>
+#include <jawt.h>
+#include <jawt_md.h>
 #include <string.h>
 
 #include "jawt_ffm.h"

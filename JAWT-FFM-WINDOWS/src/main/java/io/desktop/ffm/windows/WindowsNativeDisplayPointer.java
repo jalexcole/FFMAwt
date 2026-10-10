@@ -1,4 +1,4 @@
-package io.desktop.ffm.unix;
+package io.desktop.ffm.windows;
 
 import java.lang.foreign.MemorySegment;
 import java.lang.foreign.SegmentAllocator;
